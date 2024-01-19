@@ -1,0 +1,50 @@
+[
+  {
+    "id": 0,
+    "tshirtname": "T-shirt 1",
+    "logo": "🏕️",
+    "size": "M"
+  },
+  {
+    "id": 1,
+    "tshirtname": "T-shirt 2",
+    "logo": "🔥",
+    "size": "XL"
+  },
+  {
+    "id": 2,
+    "tshirtname": "T-shirt 3",
+    "logo": "🌞",
+    "size": "L"
+  },
+  {
+    "id": 3,
+    "tshirtname": "T-shirt 4",
+    "logo": "🌻",
+    "size": "S"
+  },
+  {
+    "id": 4,
+    "tshirtname": "T-shirt 5",
+    "logo": "😎",
+    "size": "L"
+  },
+  {
+    "id": 5,
+    "tshirtname": "T-shirt 6",
+    "logo": "☕",
+    "size": "XL"
+  },
+  {
+    "id": 6,
+    "tshirtname": "T-shirt 7",
+    "logo": "☕",
+    "size": "XL"
+  },
+  {
+    "id": 8,
+    "tshirtname": "T-shirt 8",
+    "logo": "☕",
+    "size": "XL"
+  }
+]
