@@ -7,10 +7,17 @@ const PORT = 8080;
 const dbData = fs.readFileSync('db.json');
 const db = JSON.parse(dbData);
 
-
 // middleware
 // every request will pass through this middleware, being parsed into json
 app.use(express.json());
+
+
+
+//POST import
+const postTshirt = require('./postTshirt');
+postTshirt(app);
+
+
 
 // starts the api on a specified port (PORT)
 app.listen(
@@ -51,47 +58,7 @@ function isValidTshirt(tshirt) {
 
 
 
-// POST new tshirt object
-app.post('/tshirt/:id', (req, res) => {
 
-    // the id is contained in the url
-    const id = parseInt(req.params.id);
-
-    // the new tshirt data is contained in the request body
-    const newTshirt = req.body;
-    newTshirt.id = id;
-
-    // DEPRECATED: now assigning id from url to newTshirt
-    // check if the id in the body matches the id in the url
-    // if (id !== newTshirt.id) {
-    //     return res.status(400).send({ message: 'ID in body does not match ID in url'});
-    // }
-
-    // check if the id is already in use
-    const existingTshirt = db.find((tshirt) => tshirt.id === id);
-    if (existingTshirt) {
-        return res.status(400).send({ message: `ID ${id} is already in use` });
-    }
-
-    // check if the new tshirt data matches the format in db.json
-    const isValidFormat = isValidTshirt(newTshirt);
-    if (!isValidFormat) {
-        return res.status(400).send({ message: 'Invalid tshirt data format' });
-    }
-
-    // add the new tshirt to the database
-    db.push({ id: id, ...newTshirt });
-
-    // write the changes to db.json after pushing
-    fs.writeFile('db.json', JSON.stringify(db, null, 2), (err) => {
-        if (err) {
-            return res.status(500).send({ message: 'Error writing to db.json' });
-        }
-    });
-
-    // send a success response
-    res.status(201).send({ message: `New tshirt added with the ID ${id}` });
-});
 
 
 
