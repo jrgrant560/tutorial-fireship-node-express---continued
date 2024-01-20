@@ -14,14 +14,14 @@
   {
     "id": 2,
     "tshirtname": "T-shirt 3",
-    "logo": "🌞",
-    "size": "L"
+    "logo": "🌦️",
+    "size": "XS"
   },
   {
     "id": 3,
     "tshirtname": "T-shirt 4",
     "logo": "🌻",
-    "size": "S"
+    "size": "XS"
   },
   {
     "id": 4,
@@ -32,12 +32,6 @@
   {
     "id": 5,
     "tshirtname": "T-shirt 6",
-    "logo": "☕",
-    "size": "XL"
-  },
-  {
-    "id": 6,
-    "tshirtname": "T-shirt 7",
     "logo": "☕",
     "size": "XL"
   }
